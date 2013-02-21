@@ -38,4 +38,29 @@ kippt.clips.all(function(error, data) {
 kippt.clips.getById(CLIP_ID, function(error, data) {
   if(!error) console.log(data);
 });
+
+// add to the clips list
+kippt.clips.add({
+  url: "Clip's url",    // required
+  title: "Clip's title",
+  list: "resource_uri for clip's list",
+  notes: "Notes for the clip",
+  is_starred: Boolean,
+  is_read_later: Boolean
+}, function(error, data) {
+  if(!error) console.log(data);
+});
+
+// update the clip, refer to above options
+kippt.clips.update({
+  id: CLIP_ID, // require
+  other_options: '' // refer to above options
+}, function(error, data) {
+  if(!error) console.log(data);
+});
+
+// remove the clip
+kippt.clips.remove(CLIP_ID, function(error, data) {
+  if(!error) console.log(data);
+});
 ```
