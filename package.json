@@ -5,7 +5,7 @@
 		"kippt",
 		"api"
 	],
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"homepage": "",
 	"repository": "git://github.com/enotionz/node-kippt.git",
 	"author": {
