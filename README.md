@@ -61,6 +61,41 @@ kippt.clips.update({
 
 // remove the clip
 kippt.clips.remove(CLIP_ID, function(error, data) {
+  if(!error) console.log('SUCCESS');
+});
+```
+
+### Lists API
+``` js
+// Returns the full lists object
+kippt.lists.all(function(error, data) {
   if(!error) console.log(data);
+});
+
+// Returns the list information associated with a list ID
+kippt.lists.getById(LIST_ID, function(error, data) {
+  if(!error) console.log(data);
+});
+
+// add to the list
+kippt.lists.add({
+  title: "list title", // required
+  is_private: Boolean
+}, function(error, data) {
+  if(!error) console.log(data);
+});
+
+// update the list
+kippt.lists.update({
+  id: LIST_ID, // require
+  title: "list title",
+  is_private: Boolean
+}, function(error, data) {
+  if(!error) console.log(data);
+});
+
+// remove an item from the list
+kippt.clips.remove(LIST_ID, function(error, data) {
+  if(!error) console.log('SUCCESS');
 });
 ```
