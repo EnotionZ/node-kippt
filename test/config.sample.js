@@ -11,5 +11,9 @@ module.exports = {
 	clips: {
 		// A clip ID you know to be existing
 		id: 'SOME_ID'
+	},
+	lists: {
+		// A list ID you know to exist
+		id: 'SOME_ID'
 	}
 };

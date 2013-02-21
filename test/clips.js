@@ -50,7 +50,10 @@ describe('Testing Clips', function() {
 			clips.add({url: url}, function(err, data) {
 				assert.ok(!err, 'No error');
 				assert.equal(data.url, url, 'Saved url equals post url');
-				done();
+				clips.remove(data.id, function(err) {
+					assert.ok(!err, 'No error');
+					done();
+				});
 			});
 		});
 	});
