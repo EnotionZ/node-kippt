@@ -1,0 +1,34 @@
+{
+	"name": "node-kippt",
+	"description": "A wrapper for the kippt.com API",
+	"keywords":[
+		"kippt",
+		"api"
+	],
+	"version": "0.0.1",
+	"homepage": "",
+	"repository": "git://github.com/enotionz/node-kippt.git",
+	"author":{
+		"name":"Dominick Pham",
+		"email":"dominick@dph.am",
+		"url":"http://dph.am"
+	},
+	"main":"./lib/kippt.js",
+	"scripts":{
+		"test":"make test"
+	},
+	"devDependencies":{
+		"mocha":"1.0.x",
+		"should":"0.6.x"
+	},
+	"dependencies":{},
+	"engines":{
+		"node":">= 0.4.0"
+	},
+	"licenses":[
+		{
+			"type":"MIT",
+			"url":"http://github.com/enotionz/node-kippt/raw/master/LICENSE"
+		}
+	]
+}
