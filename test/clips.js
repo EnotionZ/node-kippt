@@ -6,6 +6,21 @@ var Clips = require('../lib/clips').Clips;
 describe('Testing Clips', function() {
 	var clips = new Clips(config.auth);
 
+	describe('#search()', function() {
+		it('should return information about the query', function(done) {
+			clips.search({
+				q: 'javascript',
+				is_starred: false
+			},function(err, data) {
+				console.log(data);
+				assert.ok(!err, 'No error');
+				assert.ok(data, 'Has data');
+				assert.ok(data.objects, 'Has clips array');
+				done();
+			});
+		});
+	});
+
 	describe('#all()', function() {
 		it('should return JSON of full clips data', function(done) {
 			clips.all(function(err, data) {

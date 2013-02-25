@@ -63,6 +63,14 @@ kippt.clips.update({
 kippt.clips.remove(CLIP_ID, function(error, data) {
   if(!error) console.log('SUCCESS');
 });
+
+// search clips
+kippt.clips.search({
+  q: 'search_query',
+  is_starred: Boolean
+}, function(error, data) {
+  if(!error) console.log(data);
+});
 ```
 
 ### Lists API
