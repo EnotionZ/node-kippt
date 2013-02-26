@@ -12,7 +12,6 @@ describe('Testing Clips', function() {
 				q: 'javascript',
 				is_starred: false
 			},function(err, data) {
-				console.log(data);
 				assert.ok(!err, 'No error');
 				assert.ok(data, 'Has data');
 				assert.ok(data.objects, 'Has clips array');
