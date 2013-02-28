@@ -103,7 +103,7 @@ kippt.lists.update({
 });
 
 // remove an item from the list
-kippt.clips.remove(LIST_ID, function(error, data) {
+kippt.lists.remove(LIST_ID, function(error, data) {
   if(!error) console.log('SUCCESS');
 });
 ```
